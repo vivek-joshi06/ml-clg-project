@@ -4,6 +4,9 @@
  * active section observer, preset profile loaders, and inference REST API.
  */
 
+// Backend API Base URL (Render deployment)
+const API_BASE = "https://ml-backend-2q3l.onrender.com";
+
 // Application State
 const appState = {
     gender: 1,
@@ -108,7 +111,7 @@ function initScrollObserver() {
  */
 async function fetchModelInfo() {
     try {
-        const res = await fetch("/api/info");
+        const res = await fetch(`${API_BASE}/info`);
         const json = await res.json();
         if (json.status === "success") {
             appState.featureImportances = json.data.feature_importances;
@@ -299,7 +302,7 @@ async function executePrediction() {
     };
 
     try {
-        const response = await fetch("/api/predict", {
+        const response = await fetch(`${API_BASE}/predict`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
