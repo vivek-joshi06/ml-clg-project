@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioScan AI — Cardiovascular Disease Risk Intelligence</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="snap-container">
+
+    <!-- Subtle Floating Nav -->
+    <header class="floating-nav">
+        <div class="nav-content">
+            <a href="#hero" class="brand-link">
+                <div class="brand-pulse-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                    </svg>
+                </div>
+                <span class="brand-title">CardioScan <span>AI</span></span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#hero" class="nav-item active" data-section="hero">Overview</a>
+                <a href="#predict" class="nav-item" data-section="predict">Predictor</a>
+                <a href="#performance" class="nav-item" data-section="performance">Performance</a>
+            </nav>
+
+            <a href="#predict" class="btn-nav-action">
+                <span>Start Assessment</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Side Dot Navigation -->
+    <aside class="side-dots-nav">
+        <a href="#hero" class="dot-link active" data-section="hero" aria-label="Hero Section"><span class="dot"></span><span class="dot-tooltip">Overview</span></a>
+        <a href="#predict" class="dot-link" data-section="predict" aria-label="Prediction Section"><span class="dot"></span><span class="dot-tooltip">Predictor</span></a>
+        <a href="#performance" class="dot-link" data-section="performance" aria-label="Performance Section"><span class="dot"></span><span class="dot-tooltip">Performance</span></a>
+    </aside>
+
+    <!-- =========================================================================
+         SECTION 1: HERO SECTION (100vh)
+         ========================================================================= -->
+    <section id="hero" class="screen-section hero-section">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <div class="hero-chip">
+                    <span class="chip-pulse"></span>
+                    <span>Machine Learning Clinical Risk Engine</span>
+                </div>
+                <h1 class="hero-title">
+                    Predicting Heart Disease Risk with <span class="gradient-text">Precision Intelligence</span>
+                </h1>
+                <p class="hero-description">
+                    CardioScan AI leverages an optimized Extreme Gradient Boosting (XGBoost) model trained on 70,000 clinical records to evaluate 10-year cardiovascular risk from vital hemodynamics, biomarkers, and lifestyle patterns.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#predict" class="btn-hero-primary">
+                        <span>Get Started & Predict</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#performance" class="btn-hero-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6z"/></svg>
+                        <span>Explore Model Metrics</span>
+                    </a>
+                </div>
+
+                <div class="hero-quick-specs">
+                    <div class="spec-item">
+                        <span class="spec-num">73.73%</span>
+                        <span class="spec-lbl">Validated Accuracy</span>
+                    </div>
+                    <div class="spec-divider"></div>
+                    <div class="spec-item">
+                        <span class="spec-num">70,000</span>
+                        <span class="spec-lbl">Patient Cohort</span>
+                    </div>
+                    <div class="spec-divider"></div>
+                    <div class="spec-item">
+                        <span class="spec-num">XGBoost</span>
+                        <span class="spec-lbl">Trained Architecture</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attractive ML/AI Cardiology Visual -->
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="cardio-ring-wrapper">
+                        <div class="radar-scan"></div>
+                        <div class="cardio-center-icon">
+                            <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="url(#heartGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <defs>
+                                    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#38bdf8"/>
+                                        <stop offset="50%" stop-color="#0284c7"/>
+                                        <stop offset="100%" stop-color="#6366f1"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </div>
+                        <!-- Simulated ECG Line -->
+                        <div class="ecg-track">
+                            <svg viewBox="0 0 300 60" preserveAspectRatio="none" class="ecg-svg">
+                                <path d="M0,30 L60,30 L75,10 L85,50 L95,25 L105,35 L115,30 L180,30 L195,10 L205,50 L215,25 L225,35 L235,30 L300,30" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="ecg-pulse"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Floating Mini Analytics Widgets -->
+                    <div class="floating-widget widget-top">
+                        <div class="w-icon">⚡</div>
+                        <div class="w-text">
+                            <span class="w-val">75.6% PPV</span>
+                            <span class="w-sub">Positive Precision</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-widget widget-bottom">
+                        <div class="w-icon green">🛡️</div>
+                        <div class="w-text">
+                            <span class="w-val">MinMax Scaling</span>
+                            <span class="w-sub">Exact Training Pipeline</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Explore Indicator -->
+        <a href="#predict" class="scroll-explore-indicator" aria-label="Scroll to Prediction">
+            <span class="scroll-text">Explore & Predict</span>
+            <div class="mouse-icon">
+                <span class="wheel"></span>
+            </div>
+        </a>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: PREDICTION SECTION (100vh)
+         ========================================================================= -->
+    <section id="predict" class="screen-section predict-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Clinical Assessment</span>
+                <h2 class="section-title">Cardiovascular Risk Predictor</h2>
+            </div>
+
+            <!-- Workspace Bento: Form & Result Card -->
+            <div class="predict-workspace">
+                <!-- Left: Clinical Input Form Card -->
+                <div class="glass-card form-card">
+                    <div class="card-bar">
+                        <div class="card-bar-title">
+                            <span class="dot-indicator"></span>
+                            <span>Patient Vitals & Biomarkers</span>
+                        </div>
+                        <div class="quick-presets">
+                            <span class="preset-label">Presets:</span>
+                            <button type="button" class="chip-preset" onclick="loadPreset('low')">🟢 Low</button>
+                            <button type="button" class="chip-preset" onclick="loadPreset('moderate')">🟡 Moderate</button>
+                            <button type="button" class="chip-preset" onclick="loadPreset('high')">🔴 High</button>
+                        </div>
+                    </div>
+
+                    <form id="predictionForm" onsubmit="handlePrediction(event)">
+                        <!-- Input Grid -->
+                        <div class="form-compact-grid">
+                            <!-- Age -->
+                            <div class="input-block">
+                                <label for="age">Age (Years)</label>
+                                <div class="field-box">
+                                    <input type="number" id="age" min="18" max="85" value="48" required oninput="updateLiveCalculations()">
+                                    <span class="field-unit">yrs</span>
+                                </div>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="input-block">
+                                <label>Biological Sex</label>
+                                <div class="toggle-pills" id="genderGroup">
+                                    <button type="button" class="t-pill active" data-val="1" onclick="selectPill('genderGroup', 1)">Female</button>
+                                    <button type="button" class="t-pill" data-val="2" onclick="selectPill('genderGroup', 2)">Male</button>
+                                </div>
+                            </div>
+
+                            <!-- Height -->
+                            <div class="input-block">
+                                <label for="height">Height (cm)</label>
+                                <div class="field-box">
+                                    <input type="number" id="height" min="120" max="220" step="0.5" value="170" required oninput="updateLiveCalculations()">
+                                    <span class="field-unit">cm</span>
+                                </div>
+                            </div>
+
+                            <!-- Weight -->
+                            <div class="input-block">
+                                <label for="weight">Weight (kg)</label>
+                                <div class="field-box">
+                                    <input type="number" id="weight" min="35" max="200" step="0.5" value="72" required oninput="updateLiveCalculations()">
+                                    <span class="field-unit">kg</span>
+                                </div>
+                            </div>
+
+                            <!-- Systolic BP -->
+                            <div class="input-block">
+                                <label for="ap_hi">Systolic BP (ap_hi)</label>
+                                <div class="field-box">
+                                    <input type="number" id="ap_hi" min="70" max="240" value="122" required oninput="updateLiveCalculations()">
+                                    <span class="field-unit">mmHg</span>
+                                </div>
+                            </div>
+
+                            <!-- Diastolic BP -->
+                            <div class="input-block">
+                                <label for="ap_lo">Diastolic BP (ap_lo)</label>
+                                <div class="field-box">
+                                    <input type="number" id="ap_lo" min="40" max="180" value="82" required oninput="updateLiveCalculations()">
+                                    <span class="field-unit">mmHg</span>
+                                </div>
+                            </div>
+
+                            <!-- Cholesterol -->
+                            <div class="input-block">
+                                <label>Serum Cholesterol</label>
+                                <div class="toggle-pills" id="cholGroup">
+                                    <button type="button" class="t-pill active" data-val="1" onclick="selectPill('cholGroup', 1)">Normal</button>
+                                    <button type="button" class="t-pill" data-val="2" onclick="selectPill('cholGroup', 2)">Above</button>
+                                    <button type="button" class="t-pill" data-val="3" onclick="selectPill('cholGroup', 3)">High</button>
+                                </div>
+                            </div>
+
+                            <!-- Fasting Glucose -->
+                            <div class="input-block">
+                                <label>Fasting Glucose</label>
+                                <div class="toggle-pills" id="glucGroup">
+                                    <button type="button" class="t-pill active" data-val="1" onclick="selectPill('glucGroup', 1)">Normal</button>
+                                    <button type="button" class="t-pill" data-val="2" onclick="selectPill('glucGroup', 2)">Above</button>
+                                    <button type="button" class="t-pill" data-val="3" onclick="selectPill('glucGroup', 3)">High</button>
+                                </div>
+                            </div>
+
+                            <!-- Lifestyle: Smoker -->
+                            <div class="input-block">
+                                <label>Smoker</label>
+                                <div class="toggle-pills" id="smokeGroup">
+                                    <button type="button" class="t-pill active" data-val="0" onclick="selectPill('smokeGroup', 0)">No</button>
+                                    <button type="button" class="t-pill" data-val="1" onclick="selectPill('smokeGroup', 1)">Yes</button>
+                                </div>
+                            </div>
+
+                            <!-- Lifestyle: Alcohol -->
+                            <div class="input-block">
+                                <label>Alcohol</label>
+                                <div class="toggle-pills" id="alcoGroup">
+                                    <button type="button" class="t-pill active" data-val="0" onclick="selectPill('alcoGroup', 0)">No</button>
+                                    <button type="button" class="t-pill" data-val="1" onclick="selectPill('alcoGroup', 1)">Yes</button>
+                                </div>
+                            </div>
+
+                            <!-- Lifestyle: Active -->
+                            <div class="input-block full-width-sm">
+                                <label>Physical Activity</label>
+                                <div class="toggle-pills" id="activeGroup">
+                                    <button type="button" class="t-pill" data-val="0" onclick="selectPill('activeGroup', 0)">Sedentary</button>
+                                    <button type="button" class="t-pill active" data-val="1" onclick="selectPill('activeGroup', 1)">Active</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Real-time Clinical Badges Strip -->
+                        <div class="realtime-status-strip">
+                            <div class="rt-item">
+                                <span class="rt-lbl">Live BMI:</span>
+                                <span class="rt-val" id="bmiDisplay">24.9 kg/m²</span>
+                                <span class="rt-chip normal" id="bmiBadge">Normal</span>
+                            </div>
+                            <div class="rt-divider"></div>
+                            <div class="rt-item">
+                                <span class="rt-lbl">BP Staging:</span>
+                                <span class="rt-val" id="bpDisplay">Pulse: 40 mmHg</span>
+                                <span class="rt-chip normal" id="bpBadge">Normal BP</span>
+                            </div>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="formErrorMessage" class="form-error-toast" style="display: none;"></div>
+
+                        <!-- Predict Action Button -->
+                        <button type="submit" id="submitBtn" class="btn-predict-glow">
+                            <span class="btn-icon">🫀</span>
+                            <span class="btn-text">Run Risk Prediction</span>
+                            <span class="spinner" id="btnSpinner" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Prediction & Result Section -->
+                <div class="glass-card result-card tier-low" id="resultCard">
+                    <div class="result-header">
+                        <div class="result-badge-wrap">
+                            <span class="risk-pill low" id="riskBadge">Low Risk</span>
+                            <span class="conf-pill" id="confidenceLabel">Confidence: 92.9%</span>
+                        </div>
+                        <span class="result-timestamp">Real-Time Inference</span>
+                    </div>
+
+                    <div class="result-main-info">
+                        <h3 class="result-tier-title" id="riskTierTitle">Low Cardiovascular Risk</h3>
+                        <p class="result-tier-desc" id="riskDescription">
+                            Patient profile demonstrates healthy physiological and behavioral markers with minimal risk of cardiovascular complications.
+                        </p>
+                    </div>
+
+                    <!-- Speedometer / Radial Gauge -->
+                    <div class="gauge-center-wrapper">
+                        <svg class="radial-gauge-svg" viewBox="0 0 240 135">
+                            <path class="gauge-track" d="M 25 115 A 95 95 0 0 1 215 115" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="20" stroke-linecap="round"/>
+                            <path id="gaugeProgressArc" class="gauge-fill" d="M 25 115 A 95 95 0 0 1 215 115" fill="none" stroke="#10b981" stroke-width="20" stroke-linecap="round" stroke-dasharray="298" stroke-dashoffset="276"/>
+                        </svg>
+
+                        <div class="gauge-stat">
+                            <span class="gauge-pct" id="probabilityNumber">7.1%</span>
+                            <span class="gauge-lbl">Probability of CVD</span>
+                        </div>
+                    </div>
+
+                    <!-- Clinical Drivers -->
+                    <div class="drivers-box">
+                        <span class="drivers-head">Primary Clinical Indicators:</span>
+                        <div class="drivers-tags" id="driversList">
+                            <span class="driver-tag optimal">✅ Optimal Biomarkers: No significant risk elevations identified.</span>
+                        </div>
+                    </div>
+
+                    <!-- Medical Advice Guidance Strip -->
+                    <div class="clinical-guidance" id="advisoryText">
+                        Patient exhibits low 10-year risk. Maintain balanced nutritional habits and routine biennial preventive checkups.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator to section 3 -->
+            <a href="#performance" class="section-next-indicator">
+                <span>View Model Performance</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: MODEL PERFORMANCE SECTION (100vh)
+         ========================================================================= -->
+    <section id="performance" class="screen-section performance-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Empirical Validation</span>
+                <h2 class="section-title">Model Performance & Analytics</h2>
+            </div>
+
+            <div class="perf-workspace">
+                <!-- Left: Big 4 KPI Cards & Model Identity -->
+                <div class="perf-kpi-column">
+                    <div class="model-id-card glass-card">
+                        <div class="model-header-row">
+                            <div class="model-badge">Primary Classifier</div>
+                            <span class="model-version">v2.4 Tuned</span>
+                        </div>
+                        <h3 class="model-name-title">Extreme Gradient Boosting (XGBoost)</h3>
+                        <p class="model-meta-desc">
+                            Ensemble of 300 gradient-boosted classification trees trained on normalized clinical observations with stratified 5-fold cross-validation.
+                        </p>
+                    </div>
+
+                    <!-- 4 Core Performance Metrics -->
+                    <div class="metrics-quad-grid">
+                        <div class="metric-card glass-card">
+                            <span class="m-label">Accuracy</span>
+                            <span class="m-val highlight">73.73%</span>
+                            <span class="m-sub">12,039 Held-Out Patients</span>
+                        </div>
+                        <div class="metric-card glass-card">
+                            <span class="m-label">Precision (PPV)</span>
+                            <span class="m-val">75.60%</span>
+                            <span class="m-sub">Positive Detection Reliability</span>
+                        </div>
+                        <div class="metric-card glass-card">
+                            <span class="m-label">Recall (Sensitivity)</span>
+                            <span class="m-val">68.20%</span>
+                            <span class="m-sub">True Positive Disease Capture</span>
+                        </div>
+                        <div class="metric-card glass-card">
+                            <span class="m-label">F1-Score</span>
+                            <span class="m-val">0.72</span>
+                            <span class="m-sub">Harmonic Precision-Recall Mean</span>
+                        </div>
+                    </div>
+
+                    <!-- Confusion Matrix Quick Snapshot -->
+                    <div class="cm-compact-card glass-card">
+                        <div class="cm-head">Held-Out Confusion Matrix (20% Partition)</div>
+                        <div class="cm-mini-grid">
+                            <div class="cm-mini-cell tn">
+                                <span class="cm-num">4,873</span>
+                                <span class="cm-lbl">True Negative</span>
+                            </div>
+                            <div class="cm-mini-cell fp">
+                                <span class="cm-num">1,294</span>
+                                <span class="cm-lbl">False Positive</span>
+                            </div>
+                            <div class="cm-mini-cell fn">
+                                <span class="cm-num">1,869</span>
+                                <span class="cm-lbl">False Negative</span>
+                            </div>
+                            <div class="cm-mini-cell tp">
+                                <span class="cm-num">4,003</span>
+                                <span class="cm-lbl">True Positive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Clean Performance Chart & Feature Importance -->
+                <div class="perf-chart-column glass-card">
+                    <div class="chart-header">
+                        <div>
+                            <h3 class="chart-title">Global Feature Importance</h3>
+                            <p class="chart-sub">Extracted directly from XGBoost decision tree splits</p>
+                        </div>
+                        <div class="chart-badge">12 Input Features</div>
+                    </div>
+
+                    <!-- Clean Horizontal Bars -->
+                    <div class="feature-importance-bars" id="featureBarsContainer">
+                        <!-- Populated dynamically by app.js -->
+                    </div>
+
+                    <div class="chart-footer-note">
+                        <span class="note-icon">💡</span>
+                        <span>Hemodynamic parameters (Systolic & Diastolic BP) dominate with over 61% cumulative importance, followed by serum cholesterol (14.07%) and age (8.93%).</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clean Footer Strip -->
+            <footer class="perf-footer-strip">
+                <span>CardioScan AI • Semester 5 ML Project • Darshan University</span>
+                <a href="#hero" class="back-to-top">
+                    <span>Back to Top</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+                </a>
+            </footer>
+        </div>
+    </section>
+
+    <!-- Client Application Logic -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
